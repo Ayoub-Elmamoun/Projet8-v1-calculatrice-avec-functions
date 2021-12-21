@@ -1,8 +1,8 @@
 
 // declaration des variables
 
-let PremierNombre, SecondNomber , operation , resultat ;
-let PremierNombreStr , SecondNumberStr ;
+let PremierNombre, SecondNombre , operation , resultat ;
+let PremierNombreStr , SecondNumbreStr ;
 
 //affichage
 
@@ -23,22 +23,41 @@ function ClickNombre(nombre)
 }
 
 
-function calculer(PremierNombre, secondNomber, operation) {
+function calculer(PremierNombre, SecondNombre, operation) {
     let resultat = undefined
 
     switch (operation) {
         case '+':
-            resultat = PremierNombre + secondNomber;
+            resultat = PremierNombre + SecondNombre;
             break;
         case '-':
-            resultat = PremierNombre - secondNomber;
+            resultat = PremierNombre - SecondNombre;
             break;
     }
     return resultat
 }
+
+
 function affichage(nombre)
 {
     let affichage = document.getElementById("affichage")
     affichage.value=""
 
+    if ( PremierNombre != undefined && SecondNombre != undefined && operation != undefined ) {
+        display.value=nombre
+    }
+    else{
+
+        if( PremierNombreStr != undefined ) {
+           affichage.value += PremierNombre 
+        }
+
+        if ( SecondNombreStr != undefined ) {
+            affichage.value += operation
+        }
+
+        if (operation != undefined) {
+           affichage.value += operation
+        }
+    }
 }
