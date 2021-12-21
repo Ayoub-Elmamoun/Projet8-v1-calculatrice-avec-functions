@@ -4,37 +4,38 @@
 let PremierNombre, SecondNomber , operation , resultat ;
 let PremierNombreStr , SecondNumberStr ;
 
-//affichage 
-function calculer(firstNumber, secondNumber, operation) {
-    let _solution = undefined
+//affichage
 
-    switch (operation) {
-        case '+':
-            _solution = firstNumber + secondNumber;
-            break;
-        case '-':
-            _solution = firstNumber - secondNumber;
-            break;
-    }
-    return _solution
-}
 
 function ClickNombre(nombre)
 {
     if (PremierNombre == undefined){       
-            PremierNombre = nombre
-        }
+        PremierNombre = nombre
+    }
     else
-        {
-            if (SecondNomber == undefined){
-                SecondNomber = nombre
-            }
+    {
+        if (SecondNomber == undefined){
+            SecondNomber = nombre
         }
+    }
     
-        affichage()
+    affichage()
 }
 
 
+function calculer(PremierNombre, secondNomber, operation) {
+    let resultat = undefined
+
+    switch (operation) {
+        case '+':
+            resultat = PremierNombre + secondNomber;
+            break;
+        case '-':
+            resultat = PremierNombre - secondNomber;
+            break;
+    }
+    return resultat
+}
 function affichage(nombre)
 {
     let affichage = document.getElementById("affichage")
