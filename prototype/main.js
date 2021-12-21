@@ -23,7 +23,8 @@ function ClickNombre(nombre)
 }
 
 
-function calculer(PremierNombre, SecondNombre, operation) {
+function calculer(PremierNombre, SecondNombre, operation)
+{
     let resultat = undefined
 
     switch (operation) {
@@ -60,4 +61,14 @@ function affichage(nombre)
            affichage.value += operation
         }
     }
+}
+
+function resultat()
+{
+    
+    PremierNombre = parseFloat(PremierNombreStr)
+    SecondNombre = parseFloat(SecondNumbreStr)
+    resultat = calculer(PremierNombre,SecondNombre,operation)
+    affichage(resultat)
+
 }
