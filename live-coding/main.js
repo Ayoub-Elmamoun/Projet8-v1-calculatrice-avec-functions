@@ -1,42 +1,74 @@
+
 // declaration des variables
 
-let x,y,result,operation
-let xStr , yStr
+let PremierNombre, SecondNombre , operation , resultat ;
+let PremierNombreStr , SecondNumbreStr ;
 
-// traitement
+//affichage
 
-function ClickNum(number)
+
+function ClickNombre(nombre)
 {
-   if (x == undefined) {
-        x=number
-   }
-   else {
-       if (y == undefined) {
-           y=number
-       }
-   }
-
-   affichage()
+    if (PremierNombre == undefined){       
+        PremierNombre = nombre
+    }
+    else
+    {
+        if (SecondNomber == undefined){
+            SecondNomber = nombre
+        }
+    }
+    
+    affichage()
 }
 
-function affichage(number)
-{
-    let affichage=document.getElementById("affichage")
-    affichage.value = ""
-    if (x != undefined && y != undefined && operation != undefined) {
-        affichage.value = number
-    } else{
 
-        if (x != undefined) {
-            affichage.value += x        
+function calculer(PremierNombre, SecondNombre, operation)
+{
+    let resultat = undefined
+
+    switch (operation) {
+        case '+':
+            resultat = PremierNombre + SecondNombre;
+            break;
+        case '-':
+            resultat = PremierNombre - SecondNombre;
+            break;
+    }
+    return resultat
+}
+
+
+function affichage(nombre)
+{
+    let affichage = document.getElementById("affichage")
+    affichage.value=""
+
+    if ( PremierNombre != undefined && SecondNombre != undefined && operation != undefined ) {
+        display.value=nombre
+    }
+    else{
+
+        if( PremierNombreStr != undefined ) {
+           affichage.value += PremierNombre 
         }
-        if (y !=undefined) {
-            affichage.value += y        
+
+        if ( SecondNombreStr != undefined ) {
+            affichage.value += operation
         }
+
         if (operation != undefined) {
-            affichage.value += operation        
+           affichage.value += operation
         }
+    }
+}
+
+function resultat()
+{
     
-        }
+    PremierNombre = parseFloat(PremierNombreStr)
+    SecondNombre = parseFloat(SecondNumbreStr)
+    resultat = calculer(PremierNombre,SecondNombre,operation)
+    affichage(resultat)
 
 }
