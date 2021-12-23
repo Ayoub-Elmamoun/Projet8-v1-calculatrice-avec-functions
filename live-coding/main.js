@@ -1,0 +1,2 @@
+// declaration des variables
+ let 
