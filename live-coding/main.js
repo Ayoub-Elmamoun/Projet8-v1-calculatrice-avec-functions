@@ -25,4 +25,18 @@ function affichage(number)
     affichage.value = ""
     if (x != undefined && y != undefined && operation != undefined) {
         affichage.value = number
-    }
+    } else{
+
+        if (x != undefined) {
+            affichage.value += x        
+        }
+        if (y !=undefined) {
+            affichage.value += y        
+        }
+        if (operation != undefined) {
+            affichage.value += operation        
+        }
+    
+        }
+
+}
