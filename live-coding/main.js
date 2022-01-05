@@ -7,7 +7,7 @@ let PremierNombreStr , SecondNumbreStr ;
 //affichage
 
 
-function ClickNombre(nombre)
+function clickNombre(nombre)
 {
     if (PremierNombre == undefined){       
         PremierNombre = nombre
@@ -25,17 +25,17 @@ function ClickNombre(nombre)
 
 function calculer(PremierNombre, SecondNombre, operation)
 {
-    let resultat = undefined
+    let result = undefined
 
     switch (operation) {
         case '+':
-            resultat = PremierNombre + SecondNombre;
+            result = PremierNombre + SecondNombre;
             break;
         case '-':
-            resultat = PremierNombre - SecondNombre;
+            result = PremierNombre - SecondNombre;
             break;
     }
-    return resultat
+    return result
 }
 
 
@@ -68,7 +68,7 @@ function resultat()
     
     PremierNombre = parseFloat(PremierNombreStr)
     SecondNombre = parseFloat(SecondNumbreStr)
-    resultat = calculer(PremierNombre,SecondNombre,operation)
-    affichage(resultat)
+    result = calculer(PremierNombre,SecondNombre,operation)
+    affichage(result)
 
 }
